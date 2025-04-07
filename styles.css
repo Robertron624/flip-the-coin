@@ -1,0 +1,114 @@
+/* Load  Kanit font */
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('resources/fonts/Kanit-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('resources/fonts/Kanit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --dark-color: #35383F;
+    --light-color: #ECEDF0;
+    --primary-color: #1F6FB0;
+    --secondary-color: #404A65;
+
+
+    --custom-transition: all 0.3s ease-in-out;
+
+    --heading-size: 4rem;
+    --subheading-size: 1.5rem;
+    --normal-size: 1.25rem;
+
+    --flip-button-shadow: 0px 4px 0px 0px #23649b;
+}
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: inherit;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Global Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    padding: 2rem 0 0 0;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: var(--heading-size);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: var(--subheading-size);
+}
+
+.heading {
+    text-shadow: 2px 2px 0px #35383f;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #35383f;
+}
