@@ -93,7 +93,7 @@ body {
 }
 
 main {
-    padding: 2rem 0 0 0;
+    padding: 2rem 0 2rem 0;
     text-align: center;
 }
 
@@ -111,4 +111,49 @@ h2 {
     text-shadow: 2px 2px 0px #35383f;
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: #35383f;
+}
+
+.coin-container {
+    margin-top: 3rem;
+    position: relative;
+    display: block; /* Changed from inline-block to block */
+}
+
+.coin-container .coin {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+}
+
+.coin-container .coin-shadow {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Centered and scaled for blur effect */
+    width: 100px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .4);
+    filter: blur(2px);
+    z-index: 1;
+}
+
+.coin-container .coin-text {
+    margin-top: 6rem;
+    font-size: var(--normal-size);
+}
+
+.flip-button {
+    font-size: var(--normal-size);
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    padding: .5rem 0;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--flip-button-shadow);
+    transition: var(--custom-transition);
+    margin-top: 4rem;
 }
