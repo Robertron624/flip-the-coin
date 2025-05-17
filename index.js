@@ -3,6 +3,7 @@ function main() {
   const coinText = document.getElementById("coin-text");
   const coinTextHeads = coinText.querySelector(".heads");  
   const coinTextTails = coinText.querySelector(".tails");// by default it has the hidden attribute
+  const coinButton = document.getElementById("coin-button");
   const coinImage = document.getElementById("coin");
 
   if(!flipCoinButton) return;
@@ -35,7 +36,7 @@ function main() {
   }
 
   flipCoinButton.addEventListener("click", flipCoin);
-  coinImage.addEventListener("click", flipCoin);
+  coinButton.addEventListener("click", flipCoin);
 }
 
 document.addEventListener("DOMContentLoaded", main);
