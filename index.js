@@ -26,8 +26,19 @@ function main() {
     const isHeads = Math.random() < 0.5;
     const result = isHeads ? "heads" : "tails";
 
+    // Alternate between heads and tails during animation for realistic effect
+    const flipInterval = setInterval(() => {
+      const currentSrc = coinImage.src;
+      if (currentSrc.includes("heads.svg")) {
+        coinImage.src = coinImages.tails;
+      } else {
+        coinImage.src = coinImages.heads;
+      }
+    }, 100); // Switch every 100ms to show both sides during flip
+
     // Wait for the animation to finish before changing the image
     setTimeout(() => {
+      clearInterval(flipInterval);
       coinImage.src = coinImages[result];
       coinTextHeads.hidden = !isHeads;
       coinTextTails.hidden = isHeads;
